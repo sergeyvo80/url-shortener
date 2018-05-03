@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/url-shortener.css' />
+    <script src="/javascripts/url-shortener.js"></script>
+  </head>
+  <body>
+
+  <div class="url-shortener">
+    <h1><%= title %></h1>
+    <form action="javascript:saveLink();">
+      <table cellpadding="10">
+        <tbody><tr>
+          <th>Long URL</th>
+          <th>Short URL</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="url" class="url-shortener__url" name="url">
+            <input type="submit" value="Create">
+          </td>
+          <td class="url-shortener__result"></td>
+        </tr>
+        </tbody></table>
+    </form>
+  </div>
+
+  </body>
+</html>

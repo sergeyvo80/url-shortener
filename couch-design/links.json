@@ -1,0 +1,8 @@
+{
+  "_id" : "_design/links",
+  "views" : {
+    "byurl" : {
+      "map" : "function(doc){if (doc.type=='link') {emit(doc.url, doc.url); }}"
+    }
+  }
+}

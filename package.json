@@ -1,0 +1,38 @@
+{
+  "name": "url-shortener",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergeyvo80/url-shortener.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "couch",
+    "couchbase",
+    "couchdb",
+    "url",
+    "shortener",
+    "urlshortener"
+  ],
+  "author": "Sergey Ovchinnikov <sergeyvo@gmail.com> (http://github.com/sergeyvo80)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergeyvo80/url-shortener/issues"
+  },
+  "homepage": "https://github.com/sergeyvo80/url-shortener",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "less-middleware": "~2.2.1",
+    "morgan": "~1.9.0",
+    "nano": "^6.4.3"
+  }
+}
