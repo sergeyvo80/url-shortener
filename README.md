@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+## Url shortener
 
-You can use the [editor on GitHub](https://github.com/sergeyvo80/url-shortener/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Web application creates, stores and processes a short link.
+The web application is based on node express, CouchDB is used to store the links.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Installation and start
 
-### Markdown
+if you do not have an node.js you need to install
+https://nodejs.org/en/download/package-manager/
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+if you do not have an CouchDB you need to install
+http://docs.couchdb.org/en/2.1.1/install/index.html
+
+
+git clone https://github.com/sergeyvo80/url-shortener.git<
+
+Rename config-dist.js to config.js. If necessary, correct the host, hostdb and etc settings for the web application.
 
 ```markdown
-Syntax highlighted code block
+npm i
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+npm start
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sergeyvo80/url-shortener/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### DB
+CouchDb is used to store the links. Every link this document with a key to the corresponding short link.
 
-### Support or Contact
+To verify the existence of a real link, use the view of CouchDB.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Shorten logic</h3>
+Now for generate short uud uses a couchDB uuid generator, from a long uuid the short uuid is computed,
+and is encoded from the hexagonal to Alfabet 58 characters.
+
+If a document with such a uuid already exists, then we will create a document with a different short uuid generated
+    from the second uuid, which we received from the CouchDB uuid generator.
+

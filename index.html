@@ -3,8 +3,51 @@
 <head>
     <title>Url shortener</title>
 </head>
-<body>
+<p>
 <h1>Url shortener</h1>
+
+<p>Web application creates, stores and processes a short link.
+    The web application is based on node express, CouchDB is used to store the links.
+    <img src="docs/ui.jpg">
+</p>
+
+
+
+<h2>Installation and start</h2>
+
+<p>if you do not have an node.js you need to install
+https://nodejs.org/en/download/package-manager/</p>
+
+<p>if you do not have an CouchDB you need to install
+http://docs.couchdb.org/en/2.1.1/install/index.html</p>
+
+
+<p>git clone https://github.com/sergeyvo80/url-shortener.git</p>
+
+<p>Rename config-dist.js to config.js. If necessary, correct the host, hostdb and etc settings for the web application.</p>
+
+<p>npm i</p>
+
+<p>npm start</p>
+
+
+<h2>DB</h2>
+<p>CouchDb is used to store the links. Every link this document with a key to the corresponding short link.
+    <img src="docs/doc.jpg">
+</p>
+<p>To verify the existence of a real link, use the view of CouchDB.</p>
+
+<h3>Shorten logic</h3>
+<p>Now for generate short uud uses a couchDB uuid generator, from a long uuid the short uuid is computed,
+and is encoded from the hexagonal to Alfabet 58 characters.
+    <img src="docs/uuid.jpg">
+</p>
+
+<p>
+If a document with such a uuid already exists, then we will create a document with a different short uuid generated
+    from the second uuid, which we received from the CouchDB uuid generator.
+</p>
+
 
 </body>
 </html>
