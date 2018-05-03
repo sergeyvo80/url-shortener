@@ -3,7 +3,7 @@
 Web application creates, stores and processes a short link.
 The web application is based on node express, CouchDB is used to store the links.
 
-![Image](https://sergeyvo80.github.io/url-shortener/docs/uuid.jpg)
+![Image](https://sergeyvo80.github.io/url-shortener/docs/ui.jpg)
 
 ### Installation and start
 
